@@ -9,7 +9,7 @@ const App = () => {
     <main className="main">
       <h1 className="main-heading">
         <AiIcons.AiOutlineCalendar />
-        &nbsp; TODO REACT + TYPESCRIPT &nbsp;
+        &nbsp; Daily To-do App &nbsp;
         <AiIcons.AiOutlineCalendar />
       </h1>
       <Navbar />

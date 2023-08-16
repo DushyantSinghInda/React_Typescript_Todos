@@ -31,21 +31,24 @@ export const TodosProvider = ({ children }: TodosProviderProps) => {
   });
 
   const handleAddToDo = (task: string) => {
-    setTodos((prev) => {
-      const newTodos: Todo[] = [
-        {
-          id: Math.random().toString(),
-          task: task,
-          completed: false,
-          createdAt: new Date(),
-        },
-        ...prev,
-      ];
-      //   console.log("Previous Data:" + prev);
-      //   console.log(newTodos);
-      localStorage.setItem("todos", JSON.stringify(newTodos));
-      return newTodos;
-    });
+    console.log(task);
+    if (task !== "") {
+      setTodos((prev) => {
+        const newTodos: Todo[] = [
+          {
+            id: Math.random().toString(),
+            task: task,
+            completed: false,
+            createdAt: new Date(),
+          },
+          ...prev,
+        ];
+        //   console.log("Previous Data:" + prev);
+        //   console.log(newTodos);
+        localStorage.setItem("todos", JSON.stringify(newTodos));
+        return newTodos;
+      });
+    }
   };
 
   // mark completed
